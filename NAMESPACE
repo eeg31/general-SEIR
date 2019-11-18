@@ -1,0 +1,7 @@
+useDynLib(general-SEIR)
+exportPattern("^[[:alpha:]]+")
+importFrom(Rcpp, evalCpp, sourceCpp)
+export(gSSA)
+export(getBeta)
+export(simRcpp)
+
