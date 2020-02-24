@@ -7,7 +7,7 @@ using namespace Rcpp;
 
 // stepModel
 IntegerVector stepModel(IntegerVector state, NumericVector r, IntegerVector spec, int nevents);
-RcppExport SEXP _simulateRcpp_stepModel(SEXP stateSEXP, SEXP rSEXP, SEXP specSEXP, SEXP neventsSEXP) {
+RcppExport SEXP _generalSEIR_stepModel(SEXP stateSEXP, SEXP rSEXP, SEXP specSEXP, SEXP neventsSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -21,7 +21,7 @@ END_RCPP
 }
 // tauleap
 IntegerVector tauleap(IntegerVector state, NumericVector r, IntegerVector spec, int nevents, double tau);
-RcppExport SEXP _simulateRcpp_tauleap(SEXP stateSEXP, SEXP rSEXP, SEXP specSEXP, SEXP neventsSEXP, SEXP tauSEXP) {
+RcppExport SEXP _generalSEIR_tauleap(SEXP stateSEXP, SEXP rSEXP, SEXP specSEXP, SEXP neventsSEXP, SEXP tauSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -36,7 +36,7 @@ END_RCPP
 }
 // getRates
 NumericVector getRates(IntegerVector state, NumericVector par, int nevents, double t);
-RcppExport SEXP _simulateRcpp_getRates(SEXP stateSEXP, SEXP parSEXP, SEXP neventsSEXP, SEXP tSEXP) {
+RcppExport SEXP _generalSEIR_getRates(SEXP stateSEXP, SEXP parSEXP, SEXP neventsSEXP, SEXP tSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -50,7 +50,7 @@ END_RCPP
 }
 // simRcpp
 NumericVector simRcpp(IntegerVector state, NumericVector par, IntegerVector spec, int nevents, int tmax, int inc, double maxtau);
-RcppExport SEXP _simulateRcpp_simRcpp(SEXP stateSEXP, SEXP parSEXP, SEXP specSEXP, SEXP neventsSEXP, SEXP tmaxSEXP, SEXP incSEXP, SEXP maxtauSEXP) {
+RcppExport SEXP _generalSEIR_simRcpp(SEXP stateSEXP, SEXP parSEXP, SEXP specSEXP, SEXP neventsSEXP, SEXP tmaxSEXP, SEXP incSEXP, SEXP maxtauSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -67,14 +67,14 @@ END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_simulateRcpp_stepModel", (DL_FUNC) &_simulateRcpp_stepModel, 4},
-    {"_simulateRcpp_tauleap", (DL_FUNC) &_simulateRcpp_tauleap, 5},
-    {"_simulateRcpp_getRates", (DL_FUNC) &_simulateRcpp_getRates, 4},
-    {"_simulateRcpp_simRcpp", (DL_FUNC) &_simulateRcpp_simRcpp, 7},
+    {"_generalSEIR_stepModel", (DL_FUNC) &_simulateRcpp_stepModel, 4},
+    {"_generalSEIR_tauleap", (DL_FUNC) &_simulateRcpp_tauleap, 5},
+    {"_generalSEIR_getRates", (DL_FUNC) &_simulateRcpp_getRates, 4},
+    {"_generalSEIR_simRcpp", (DL_FUNC) &_simulateRcpp_simRcpp, 7},
     {NULL, NULL, 0}
 };
 
-RcppExport void R_init_simulateRcpp(DllInfo *dll) {
+RcppExport void R_init_generalSEIR(DllInfo *dll) {
     R_registerRoutines(dll, NULL, CallEntries, NULL, NULL);
     R_useDynamicSymbols(dll, FALSE);
 }
