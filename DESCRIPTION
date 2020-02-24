@@ -1,4 +1,4 @@
-Package: general-SEIR
+Package: generalSEIR
 Title: generalaized SEIR model
 Version: 0.0.0.9000
 Authors@R: person("Emma", "Glennon", email = "eeg31@cam.ac.uk", role = c("aut", "cre"))
