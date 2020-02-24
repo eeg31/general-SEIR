@@ -1,6 +1,6 @@
 Package: generalSEIR
 Title: generalaized SEIR model
-Version: 0.0.0.9000
+Version: 0.0.0.9001
 Authors@R: person("Emma", "Glennon", email = "eeg31@cam.ac.uk", role = c("aut", "cre"))
 Description: simulates generalized SEIR model (Gillespie SSA with adaptive tau leaping)
 Depends: R (>= 3.3.3)
