@@ -2,18 +2,18 @@
 # Generator token: 10BE3573-1514-4C36-9D1C-5A225CD40393
 
 stepModel <- function(state, r, spec, nevents) {
-    .Call('_simulateRcpp_stepModel', PACKAGE = 'simulateRcpp', state, r, spec, nevents)
+    .Call('_generalSEIR_stepModel', PACKAGE = 'generalSEIR', state, r, spec, nevents)
 }
 
 tauleap <- function(state, r, spec, nevents, tau) {
-    .Call('_simulateRcpp_tauleap', PACKAGE = 'simulateRcpp', state, r, spec, nevents, tau)
+    .Call('_generalSEIR_tauleap', PACKAGE = 'generalSEIR', state, r, spec, nevents, tau)
 }
 
 getRates <- function(state, par, nevents, t) {
-    .Call('_simulateRcpp_getRates', PACKAGE = 'simulateRcpp', state, par, nevents, t)
+    .Call('_generalSEIR_getRates', PACKAGE = 'generalSEIR', state, par, nevents, t)
 }
 
 simRcpp <- function(state, par, spec, nevents, tmax, inc, maxtau) {
-    .Call('_simulateRcpp_simRcpp', PACKAGE = 'simulateRcpp', state, par, spec, nevents, tmax, inc, maxtau)
+    .Call('_generalSEIR_simRcpp', PACKAGE = 'generalSEIR', state, par, spec, nevents, tmax, inc, maxtau)
 }
 
