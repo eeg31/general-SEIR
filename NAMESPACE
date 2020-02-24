@@ -1,4 +1,4 @@
-useDynLib(general-SEIR)
+useDynLib(generalSEIR)
 exportPattern("^[[:alpha:]]+")
 importFrom(Rcpp, evalCpp, sourceCpp)
 export(gSSA)
