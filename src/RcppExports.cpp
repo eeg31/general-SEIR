@@ -67,10 +67,10 @@ END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_generalSEIR_stepModel", (DL_FUNC) &_simulateRcpp_stepModel, 4},
-    {"_generalSEIR_tauleap", (DL_FUNC) &_simulateRcpp_tauleap, 5},
-    {"_generalSEIR_getRates", (DL_FUNC) &_simulateRcpp_getRates, 4},
-    {"_generalSEIR_simRcpp", (DL_FUNC) &_simulateRcpp_simRcpp, 7},
+    {"_generalSEIR_stepModel", (DL_FUNC) &_generalSEIR_stepModel, 4},
+    {"_generalSEIR_tauleap", (DL_FUNC) &_generalSEIR_tauleap, 5},
+    {"_generalSEIR_getRates", (DL_FUNC) &_generalSEIR_getRates, 4},
+    {"_generalSEIR_simRcpp", (DL_FUNC) &_generalSEIR_simRcpp, 7},
     {NULL, NULL, 0}
 };
 
