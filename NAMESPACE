@@ -4,4 +4,5 @@ importFrom(Rcpp, evalCpp, sourceCpp)
 export(gSSA)
 export(getBeta)
 export(simRcpp)
+export(simulate1)
 
